@@ -270,7 +270,7 @@ def get_rule_parser(is_required, command):
     runtime_group.add_argument('-R', '--runtime', required=False, help='Runtime for lambda function', choices=['nodejs4.3', 'java8', 'python3.6', 'python3.6-lib', 'python3.7', 'python3.7-lib', 'python3.8', 'python3.8-lib', 'dotnetcore1.0', 'dotnetcore2.0'], metavar="")
     runtime_group.add_argument('--source-identifier', required=False, help="[optional] Used only for creating Managed Rules.")
     parser.add_argument('-l','--custom-lambda-name', required=False, help='[optional] Provide custom lambda name')
-    parser.set_defaults(runtime='python3.6-lib')
+    # parser.set_defaults(runtime='python3.6-lib')
     parser.add_argument('-r','--resource-types', required=False, help='[optional] Resource types that will trigger event-based Rule evaluation')
     parser.add_argument('-m','--maximum-frequency', required=False, help='[optional] Maximum execution frequency for scheduled Rules', choices=['One_Hour','Three_Hours','Six_Hours','Twelve_Hours','TwentyFour_Hours'])
     parser.add_argument('-i','--input-parameters', help="[optional] JSON for required Config parameters.")
